@@ -1,0 +1,34 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+@layer base {
+    body {
+        @apply antialiased overflow-x-hidden;
+        cursor: none !important;
+    }
+
+    /* Custom Scrollbar for 2030 experience */
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(37, 99, 235, 0.1);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(37, 99, 235, 0.2);
+    }
+
+    /* Disable interaction with underlying 3D elements */
+    .pointer-events-none {
+        pointer-events: none !important;
+    }
+}
